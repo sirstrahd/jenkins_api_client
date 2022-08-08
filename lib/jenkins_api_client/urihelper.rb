@@ -12,7 +12,7 @@ module JenkinsApi
     # Encode a string for use in the hiearchical part of an URL
     #
     def path_encode(path)
-      Addressable::URI.escape(path.encode(Encoding::UTF_8))
+      Addressable::URI.encode_component(path.encode(Encoding::UTF_8))
     end
   end
 end
